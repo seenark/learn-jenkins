@@ -1,0 +1,11 @@
+- hosts: test1
+  tasks: 
+    # - shell: echo Hello World from Jenkins ansible plugin > /tmp/ansible-file
+    - debug: 
+        msg: "{{ MSG }}"
+    - name: Transfer template to web server
+      template: 
+        src: index.html
+        dest: /var/www/html/index.html
+
+
